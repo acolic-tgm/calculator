@@ -14,8 +14,8 @@
 
         <RadioButton
             android:id="@+id/radioButton5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:text="*"
@@ -24,11 +24,14 @@
 
         <TextView
             android:id="@+id/outputTextView"
-            android:layout_width="wrap_content"
+            android:layout_width="140dp"
             android:layout_height="wrap_content"
-            android:text="Hier wird der Ausgabetext erscheinen"
-            tools:layout_editor_absoluteX="87dp"
-            tools:layout_editor_absoluteY="291dp" />
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:text="Output"
+            app:layout_constraintEnd_toEndOf="@+id/button"
+            app:layout_constraintTop_toBottomOf="@+id/button" />
 
         <EditText
             android:id="@+id/editTextNumber"
@@ -58,8 +61,8 @@
 
         <RadioButton
             android:id="@+id/radioButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginTop="16dp"
             android:text="+"
             app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
@@ -67,8 +70,8 @@
 
         <RadioButton
             android:id="@+id/radioButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:text="-"
@@ -77,8 +80,8 @@
 
         <RadioButton
             android:id="@+id/radioButton4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:text="/"
@@ -87,32 +90,42 @@
 
         <Button
             android:id="@+id/button"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
             android:text="Berechnen"
+            app:layout_constraintEnd_toStartOf="@+id/button2"
             app:layout_constraintStart_toStartOf="@+id/editTextNumber"
-            app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
+            app:layout_constraintTop_toTopOf="@+id/button2" />
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
             android:text="MS"
-            app:layout_constraintStart_toEndOf="@+id/button"
-            app:layout_constraintTop_toTopOf="@+id/button" />
+            app:layout_constraintEnd_toStartOf="@+id/button3"
+            app:layout_constraintTop_toTopOf="@+id/button3" />
 
         <Button
             android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
             android:text="MR"
-            app:layout_constraintStart_toEndOf="@+id/button2"
-            app:layout_constraintTop_toTopOf="@+id/button" />
+            app:layout_constraintEnd_toEndOf="@+id/editTextNumber"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/radioButton"
+            app:layout_constraintEnd_toEndOf="@+id/radioButton4"
+            app:layout_constraintStart_toStartOf="@+id/radioButton"
+            app:layout_constraintTop_toTopOf="@+id/radioButton" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
