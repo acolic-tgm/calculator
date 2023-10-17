@@ -40,6 +40,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Set up RadioButtons programmatically in RadioGroup
+        RadioButton radioButton1 = findViewById(R.id.radioButton);
+        RadioButton radioButton2 = findViewById(R.id.radioButton2);
+        RadioButton radioButton4 = findViewById(R.id.radioButton4);
+        RadioButton radioButton5 = findViewById(R.id.radioButton5);
+
+
+
+        // Set up OnClickListener for the Calculate button
         calculateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
