@@ -92,7 +92,7 @@
             android:id="@+id/button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Button"
+            android:text="Berechnen"
             app:layout_constraintEnd_toStartOf="@+id/button2"
             app:layout_constraintStart_toStartOf="@+id/editTextNumber"
             app:layout_constraintTop_toTopOf="@+id/button2" />
@@ -103,7 +103,7 @@
             android:layout_height="50dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
-            android:text="Button"
+            android:text="MS"
             app:layout_constraintEnd_toStartOf="@+id/button3"
             app:layout_constraintTop_toTopOf="@+id/button3" />
 
@@ -112,18 +112,23 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginTop="8dp"
-            android:text="Button"
+            android:text="MR"
             app:layout_constraintEnd_toEndOf="@+id/editTextNumber"
             app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:layout_width="140dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="end"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
+            android:background="#0016F9"
+            android:gravity="end"
             android:text="TextView"
+            android:textColor="#FFFFFF"
+            app:guidelineUseRtl="false"
             app:layout_constraintEnd_toEndOf="@+id/button"
             app:layout_constraintTop_toBottomOf="@+id/button" />
 
