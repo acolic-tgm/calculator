@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         editTextNumber1 = findViewById(R.id.editTextNumber);
         editTextNumber2 = findViewById(R.id.editTextNumber2);
         berechnenButton = findViewById(R.id.berechnenButton);
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         resultTextView = findViewById(R.id.textView);
         operationRadioGroup = findViewById(R.id.radioGroup);
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
 
         resultTextView.setOnTouchListener(new View.OnTouchListener() {
             @Override
