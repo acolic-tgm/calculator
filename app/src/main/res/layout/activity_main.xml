@@ -84,31 +84,34 @@
             android:layout_marginTop="8dp"
             android:ems="10"
             android:inputType="number"
+            android:shadowColor="#FF0000"
+            android:textColor="#000000"
+            android:textColorHint="#FF0000"
             app:layout_constraintEnd_toEndOf="@+id/editTextNumber"
             app:layout_constraintStart_toStartOf="@+id/editTextNumber"
             app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/berechnenButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Berechnen"
-            app:layout_constraintEnd_toStartOf="@+id/button2"
+            app:layout_constraintEnd_toStartOf="@+id/msButton"
             app:layout_constraintStart_toStartOf="@+id/editTextNumber"
-            app:layout_constraintTop_toTopOf="@+id/button2" />
+            app:layout_constraintTop_toTopOf="@+id/msButton" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/msButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:text="MS"
-            app:layout_constraintEnd_toStartOf="@+id/button3"
-            app:layout_constraintTop_toTopOf="@+id/button3" />
+            app:layout_constraintEnd_toStartOf="@+id/mrButton"
+            app:layout_constraintTop_toTopOf="@+id/mrButton" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/mrButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginTop="8dp"
@@ -126,11 +129,11 @@
             android:layout_marginRight="24dp"
             android:background="#0016F9"
             android:gravity="end"
-            android:text="TextView"
+            android:text="0"
             android:textColor="#FFFFFF"
             app:guidelineUseRtl="false"
-            app:layout_constraintEnd_toEndOf="@+id/button"
-            app:layout_constraintTop_toBottomOf="@+id/button" />
+            app:layout_constraintEnd_toEndOf="@+id/berechnenButton"
+            app:layout_constraintTop_toBottomOf="@+id/berechnenButton" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
