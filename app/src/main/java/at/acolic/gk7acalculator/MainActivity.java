@@ -19,12 +19,12 @@ public class MainActivity extends AppCompatActivity {
     private EditText editTextNumber1;
     private EditText editTextNumber2;
     private Button berechnenButton;
-    private Button msButton; // Memory Store Button
-    private Button mrButton; // Memory Recall Button
+    private Button msButton;
+    private Button mrButton;
     private TextView resultTextView;
     private RadioGroup operationRadioGroup;
     private SharedPreferences sharedPreferences;
-    private double result = 0; // Klassevariable für das Ergebnis der Berechnung
+    private double result = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
 
                 resultTextView.setText(String.valueOf(result));
 
-                // Ändert die Textfarbe auf Rot, wenn das Ergebnis negativ ist
+
                 if (result < 0) {
                     resultTextView.setTextColor(Color.RED);
                 } else {
@@ -107,8 +107,6 @@ public class MainActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putFloat("result", (float) result);
                 editor.apply();
-
-                // Zeigt einen Toast mit der Meldung "Gespeichert" ("Saved")
                 Toast.makeText(MainActivity.this, "Gespeichert", Toast.LENGTH_SHORT).show();
             }
         });
@@ -120,14 +118,11 @@ public class MainActivity extends AppCompatActivity {
 
                 resultTextView.setText(String.valueOf(storedResult));
 
-                // Ändert die Textfarbe auf Rot, wenn das geladene Ergebnis negativ ist
                 if (storedResult < 0) {
                     resultTextView.setTextColor(Color.RED);
                 } else {
                     resultTextView.setTextColor(Color.WHITE);
                 }
-
-                // Zeigt einen Toast mit der Meldung "Geladen" ("Loaded")
                 Toast.makeText(MainActivity.this, "Geladen", Toast.LENGTH_SHORT).show();
             }
         });
@@ -136,6 +131,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        berechnenButton.setBackgroundColor(getResources().getColor(R.color.green)); // Setzt die Hintergrundfarbe von "Berechnen" auf Grün
+        berechnenButton.setBackgroundColor(getResources().getColor(R.color.green));
     }
 }
